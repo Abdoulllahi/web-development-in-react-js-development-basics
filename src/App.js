@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import Parent from './components/Parent';
 
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
       <CustomInput placeholder='name' type='text' />
       <CustomInput placeholder='job title' type='text' />
       <CustomInput placeholder='age' type='number' />
+      <Parent />
     </div>
   );
 }
