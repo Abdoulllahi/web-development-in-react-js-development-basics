@@ -1,3 +1,4 @@
+import React from "react";
 
 function Child2(props) {
     return (
