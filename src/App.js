@@ -5,11 +5,15 @@ import { useState } from 'react';
 function App() {
   
   return (
-    <CustomInput />
+    <div>
+      <CustomInput placeholder='name' type='text' />
+      <CustomInput placeholder='job title' type='text' />
+      <CustomInput placeholder='age' type='number' />
+    </div>
   );
 }
 
-function CustomInput() {
+function CustomInput(props) {
   const [value, setValue] = useState('');
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -17,8 +21,9 @@ function CustomInput() {
 
   return (
     <input
-      type='text'
+      type={props.type}
       value={value}
+      placeholder={props.placeholder}
       onChange={handleChange}
     />
   )
